@@ -25,7 +25,7 @@ script:
   - docker tag udagram-api-user kaffyshub/udagram-api-user:v3a
   - docker tag udagram-frontend kaffyshub/udagram-frontend:local
 
-#Task to execute after the process is successful
+#Task to execute after the build process is successful
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push kaffyshub/udagram-reverseproxy:v3a
