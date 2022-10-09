@@ -26,7 +26,7 @@ jobs:
             docker tag udagram-api-user kaffyshub/udagram-api-user:v3a
             
             docker build -t udagram-frontend ./udagram-frontend
-            docker tag udagram-frontend kaffyshub/udagram-frontend:v3a
+            docker tag udagram-frontend kaffyshub/udagram-frontend:v3b
             docker build -t udagram-reverseproxy ./udagram-reverseproxy
             docker tag udagram-reverseproxy kaffyshub/udagram-reverseproxy:v3a
             echo "-------- All images succesfully built----------"
@@ -35,7 +35,7 @@ jobs:
             echo "-------------- Pushing images to dockerhub-------"
             docker push kaffyshub/udagram-api-feed:v3a
             docker push kaffyshub/udagram-api-user:v3a
-            docker push kaffyshub/udagram-frontend:v3a
+            docker push kaffyshub/udagram-frontend:v3b
             docker push kaffyshub/udagram-reverseproxy:v3a
 workflows:
   default:
