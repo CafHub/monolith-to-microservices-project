@@ -43,3 +43,4 @@ workflows:
       - lint-app
       - build-docker:
           requires: [lint-app]
+          
